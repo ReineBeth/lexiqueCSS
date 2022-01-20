@@ -1,0 +1,2547 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://kit.fontawesome.com/0d5dafc31b.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="styles/style.css">
+	<script src="script/script.js" defer></script>
+
+	<title>Travail long 01</title>
+
+</head>
+<body>
+	<div id="top" aria-hidden="true">top</div>
+	<header>
+		<div class="entete">
+			<h1>Les propriétés CSS3</h1>
+		</div>
+		<nav>
+			<button class="menu_btn" aria-label="Bouton ouvrir menu"><i class="fa fa-bars"></i></button>
+			
+			<ul class="navigation_ul">
+				<li class="navigation_ul_li"><a href="#lettre_a">A</a></li>
+				<li class="navigation_ul_li"><a href="#lettre_b">B</a></li>
+				<li class="navigation_ul_li"><a href="#lettre_c">C</a></li>
+				<li class="navigation_ul_li"><a href="#lettre_d">D</a></li>
+				<li class="navigation_ul_li"><a href="#lettre_f">F</a></li>
+				<li class="navigation_ul_li"><a href="#lettre_g">G</a></li>
+				<li class="navigation_ul_li"><a href="#lettre_h">H</a></li>
+				<li class="navigation_ul_li"><a href="#lettre_m">M</a></li>
+				<li class="navigation_ul_li"><a href="#lettre_o">O</a></li>
+				<li class="navigation_ul_li"><a href="#lettre_p">P</a></li>
+				<li class="navigation_ul_li"><a href="#lettre_r">R</a></li>
+				<li class="navigation_ul_li"><a href="#lettre_s">S</a></li>
+				<li class="navigation_ul_li"><a href="#lettre_t">T</a></li>
+				<li class="navigation_ul_li"><a href="#lettre_w">W</a></li>
+			</ul>
+
+			<button aria-label="bouton fermer menu" class="close_btn"><i class="fas fa-times"></i></button>		
+		</nav>
+	</header>
+	<main>
+	<!-- A -->
+
+		<section>
+			<h2 id="lettre_a">A</h2>
+
+			<h3>Alignement</h3>
+			<p>CSS3 a introduit trois propriétés en lien avec l'alignement d'un élément flexible.</p>
+
+			<h4><code>align-content</code></h4>
+
+			<p>La propriété <dfn>align-content</dfn> est une propriété qui modifie le comportement des lignes d'un élément qui est <code>flex-wrap</code>.</p>
+
+			<p>Il existe plusieurs valeurs possible dont&nbsp;:</p>
+
+			<ul class="liste_valeur">
+				<li><code>center</code></li>
+				<li><code>space-around</code></li>
+				<li><code>safe</code></li>
+				<li><code>start</code></li>
+				<li><code>baseline</code></li>
+				<li><code>stretch</code></li>
+			</ul>
+
+			<p>La valeur par défaut est&nbsp;:<code>stretch</code>.</p>
+
+			<div class="exemple">
+
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple contenant_align_content">
+						<div class="contenu_align"></div>
+						<div class="contenu_align"></div>
+						<div class="contenu_align"></div>
+						<div class="contenu_align"></div>
+					</div>
+					<button aria-label="Bouton voir code : Align-Content" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->contenant_exemple { 
+<!--                 	    -->		height: 200px;
+<!--                 	    -->		width: 250px;
+<!--                 	    -->}
+
+<!--                 	    -->.contenant_align_content { 
+<!--                 	    -->		align-content: space-around;
+<!--                 	    -->		display: flex;
+<!--                 	    -->		flex-wrap: wrap;
+<!--                 	    -->}
+
+<!--                 	    -->.contenu_align { 
+<!--                 	    -->		background: #f95d9b;
+<!--                 	    -->		border: 5px solid var(--secondaire);
+<!--                 	    -->		height: 50px;
+<!--                 	    -->		margin: 5px;
+<!--                 	    -->		width: 100px;
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+
+				</div>
+			</div>
+
+			<h4><code>align-items</code></h4>
+
+			<p>La propriété <dfn>align-items</dfn> définit la propriété <code>align-self</code> sur l'ensemble des éléments dans un parent flexible.</p>
+
+			<p>Il existe plusieurs valeurs possible dont&nbsp;:</p>
+
+			<ul class="liste_valeur">
+				<li><code>center</code>,</li>
+				<li><code>self-end</code></li>
+				<li><code>safe</code></li>
+				<li><code>start</code></li>
+				<li><code>stretch</code></li>
+			</ul>
+
+			<p>La valeur par défaut est&nbsp;:<code>stretch</code>.</p>
+
+			<div class="exemple">
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple contenant_align_items">
+						<div class="contenu_align"></div>
+						<div class="contenu_align"></div>
+						<div class="contenu_align"></div>
+						<div class="contenu_align"></div>
+					</div>
+					<button aria-label="Bouton voir code : Align-items" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->contenant_exemple { 
+<!--                 	    -->	height: 200px;
+<!--                 	    -->	margin: 10px;
+<!--                 	    -->	width: 250px;
+<!--                 	    -->}
+
+<!--                 	    -->.contenant_align_content { 
+<!--                 	    -->	align-content: space-around;
+<!--                 	    -->	display: flex;
+<!--                 	    -->	flex-wrap: wrap;
+<!--                 	    -->}
+
+<!--                 	    -->.contenant_align_items {
+<!--                 	    -->	align-items: space-around;
+<!--                 	    -->	display: flex;
+<!--                 	    -->	flex-wrap: wrap;
+<!--                 	    -->}
+
+							</code>	
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+			</div>
+			
+			<h4><code>align-self</code></h4>
+
+			<p>La propriété <dfn>align-self</dfn> permet de définir l'alignement d'un élément spécifique qui se retrouve dans un parent <code>flex</code>.</p>
+			<p>Il existe plusieurs valeurs possible dont&nbsp;:</p>
+
+			<ul class="liste_valeur">
+				<li><code>center</code></li>
+				<li><code>self-end</code></li>
+				<li><code>safe</code></li>
+				<li><code>start</code></li>
+				<li><code>stretch</code></li>
+			</ul>
+
+			<p>La valeur par défaut est&nbsp;:<code>auto</code>.</p>
+			
+			<div class="exemple">
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple contenant_align_self">
+						<div class="contenu_align"></div>
+						<div class="contenu_align"></div>
+						<div class="contenu_align"></div>
+						<div class="contenu_align"></div>
+					</div>
+					<button aria-label="Bouton voir code : Align-self" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->contenant_exemple { 
+<!--                 	    -->	height: 200px;
+<!--                 	    -->	margin: 10px;
+<!--                 	    -->	width: 250px;
+<!--                 	    -->}
+
+<!--                 	    -->.contenant_align_content { 
+<!--                 	    -->	align-content: space-around;
+<!--                 	    -->	display: flex;
+<!--                 	    -->	flex-wrap: wrap;
+<!--                 	    -->}
+
+<!--                 	    -->.contenant_align_self { 
+<!--                 	    -->	display: flex;
+<!--                 	    -->	flex-wrap: wrap;
+<!--                 	    -->}
+
+<!--                 	    -->.contenant_align_self &gt; .contenu_align:nth-child(2) { 
+<!--                 	    -->	align-self: flex-end;
+<!--                 	    -->	background: #161748;
+<!--                 	    -->	border-color: #f95d9b;
+}
+							</code>
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+			</div>
+
+		</section>
+	<!-- B -->
+		<section>
+			<h2 id="lettre_b">B</h2>
+
+			<h3>Les bordures</h3>
+
+			<p>CSS3 a ajouté des propriétés qui permettent d'avoir des bordures plus interessantes.</p>
+
+			<h4><code>border-image</code></h4>
+
+			<p>La propriété <dfn>border-image</dfn> permet de mettre une image ou un gradient sur la bordure.</p>
+			
+			<p>C'est une propriété raccourcis qui rassemble les propriétés&nbsp;:</p>
+
+			<ul class="liste_valeur">
+				<li><code>border-image-source</code></li>
+				<li><code>border-image-width</code></li> <li><code>border-image-repeat</code></li>
+				<li><code>border-image-slice</code></li>
+				<li><code>border-image-outset</code></li>
+			</ul>
+
+				
+			<p>La valeur par défaut est&nbsp;:<code>none 100% 1 0 stretch</code>.</p>
+
+			<div class="exemple">
+
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple contenant_border-image_1"></div>
+					<button aria-label="Bouton voir code : border Ex. 1" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.contenant_exemple { 
+<!--                 	    -->	border: 5px solid var(--principale);
+<!--                 	    -->	height: 200px;
+<!--                 	    -->	margin: 10px;
+<!--                 	    -->	width: 250px;
+<!--                 	    -->}
+
+<!--                 	    -->.contenant_border-image_1 {
+<!--                 	    -->	border-image: linear-gradient(var(--accent), var(--principale)) 50 / 10;
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="Bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple contenant_border-image_2"></div>
+					<button aria-label="Bouton voir code : border Ex. 2" class="modale_btn"><i class="fas fa-code"></i></button>
+				</div>
+				<div class="modale">
+					<pre tabindex="0">
+						<code>
+							
+<!--                 	    -->.contenant_exemple { 
+<!--                 	    -->	border: 5px solid #161748;
+<!--                 	    -->	height: 200px;
+<!--                 	    -->	width: 250px;
+<!--                 	    -->}
+
+<!--                 	    -->.contenant_border-image_2 {
+<!--                 	    -->	border-image: url(/images/bordure_pois.jpg) 27 round;
+<!--                 	    -->}
+
+						</code>
+					</pre>
+					<button aria-label="bouton fermer modale"  class="modale_close_btn"><i class="fas fa-times"></i></button>	
+				</div>
+			</div>
+
+			<h4><code>border-radius</code></h4>
+
+			<p>La propriété <dfn>border-radius</dfn> permet de définir à quel point nous souhaitons que les coins soient arrondis.</p>
+
+			<p>Lorsque l'on place qu'une seule valeur, nous définissons tous les coins en même temps. Il est possible de définir les coins indépendamment en utilisant une propriété spécifique comme&nbsp;:</p>
+
+			<ul class="liste_valeur">
+				<li><code>border-bottom-right-radius</code></li>
+				<li><code>border-bottom-left-radius</code></li>
+				<li><code>border-top-right-radius</code></li>
+				<li><code>border-top-left-radius</code></li>
+			</ul>
+
+			<p>Il est aussi possible de définir les coins indépendamment en utilisant seulement la propriété <code>border-radius</code>, pour ce faire, nous devons mettre plusieurs valeurs séparées par un espace.</p>
+
+			<dl>
+				<dt>Une valeur</dt>
+				<dd>Tous les coins auront la valeur écrite.</dd>
+
+				<dt>Deux valeurs</dt>
+				<dd>La première valeur représentera le coin supérieur gauche et le coin inférieur droit. La deuxième valeur représentera le coin supérieur droit et le coin inférieur gauche.</dd>
+
+				<dt>Trois valeurs</dt>
+				<dd>La première valeur représente le coin supérieur gauche. La seconde valeur représente le coin supérieur droit et le coin supérieur gauche. La dernière valeur représente le coin inférieur droit.</dd>
+
+				<dt>Quatre valeurs </dt>
+				<dd>La première valeur représente le coin supérieur gauche. La deuxième valeur représente le coin suppérieur droit. La troisième valeur représente le coin inférieur droit. La dernière valeur représente le coin inférieur gauche.</dd>
+			</dl>
+
+			<p>La valeur par défaut est&nbsp;:<code>0</code>.</p>
+
+			<div class="exemple">
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple contenant_border-radius_1"></div>
+					<button aria-label="Bouton voir code : border-radius Ex.1" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.contenant_exemple { 
+<!--                 	    -->	border: 5px solid #161748;
+<!--                 	    -->	height: 200px;
+<!--                 	    -->	width: 250px;
+<!--                 	    -->}
+
+<!--                 	    -->.contenant_border-radius_1 { 
+<!--                 	    -->	border-radius: 50%;
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="Bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple contenant_border-radius_2"></div>
+					<button aria-label="Bouton voir code : border Ex. 2" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.contenant_exemple { 
+<!--                 	    -->	border: 5px solid #161748;
+<!--                 	    -->	height: 200px;
+<!--                 	    -->	width: 250px;
+<!--                 	    -->}
+
+<!--                 	    -->.contenant_border-radius_2 { 
+<!--                 	    -->	border-radius: 50% 10px;
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="Bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple contenant_border-radius_3"></div>
+					<button aria-label="Bouton voir code : border Ex. 3" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.contenant_exemple { 
+<!--                 	    -->	border: 5px solid #161748;
+<!--                 	    -->	height: 200px;
+<!--                 	    -->	width: 250px;
+<!--                 	    -->}
+
+<!--                 	    -->.contenant_border-radius_3 { 
+<!--                 	    -->	border-radius: 50% 10px 15px;
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="Bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple contenant_border-radius_4"></div>
+					<button aria-label="Bouton voir code : border Ex. 4" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.contenant_exemple { 
+<!--                 	    -->	border: 5px solid #161748;
+<!--                 	    -->	height: 200px;
+<!--                 	    -->	width: 250px;
+<!--                 	    -->}
+
+<!--                 	    -->.contenant_border-radius_4 { 
+<!--                 	    -->	border-radius: 50% 10px 15px 35%;
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="Bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+			</div>
+		</section>
+	<!-- C -->
+		<section>
+			<h2 id="lettre_c">C</h2>
+			
+			<h3>Colonne</h3>
+			<p>CSS3 a introduit la propriété <code>columns</code> ainsi que plusieurs propriétés complémentaires. </p> 
+
+			<h4><code>columns</code></h4>
+
+			<p>La propriété <dfn>columns</dfn> est une propriété raccourcis qui regroupe les propriétés&nbsp;:</p>
+
+			<ul class="liste_valeur">
+				<li><code>column-width</code></li>
+				<li><code>column-count</code></li>
+			</ul>
+
+			<p>La valeur par défaut est&nbsp;: <code>auto auto</code>.</p>
+
+			<div class="exemple">
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple contenant_columns exemple_columns">
+						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore beatae molestiae est impedit eaque aspernatur in natus unde repellat, sunt ut cum iusto eius, ducimus dolores explicabo quo? 
+						</p>
+					</div>
+					<button aria-label="Bouton voir code : columns" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.enveloppe_modale &gt; .contenant_columns { 
+<!--                 	    -->	height: 250px;
+<!--                 	    -->	max-width: 600px;
+<!--                 	    -->}
+
+<!--                 	    -->.exemple_columns { 
+<!--                 	    -->	columns: 10rem 3;			
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="Bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+			</div>
+
+			<h4><code>column-count</code></h4>
+
+			<p>La propriété <dfn>column-count</dfn> définit le nombre de colonnes qui sera affichées. </p>
+
+			<p>La valeur par défaut est&nbsp;:<code>auto</code>.</p>
+
+			<div class="exemple">
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple contenant_columns exemple_column-count">
+						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore beatae molestiae est impedit eaque aspernatur in natus unde repellat, sunt ut cum iusto eius, ducimus dolores explicabo quo? Consectetur animi, accusantium laboriosam nobis ea ullam praesentium esse hic sint dolore in saepe illo.
+						</p>
+					</div>
+					<button aria-label="Bouton voir code : columns count" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.enveloppe_modale &gt; .contenant_columns { 
+<!--                 	    -->	height: 250px;
+<!--                 	    -->	max-width: 600px;
+<!--                 	    -->}
+
+<!--                 	    -->.exemple_column-count { 
+<!--                 	    -->	column-count: 3;
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="Bouton femer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+			</div>
+
+			<h4><code>column-fill</code></h4>
+
+			<p>La propriété <dfn>column-fill</dfn> permet de définir comment le contenu est réparti dans les colonnes.</p>
+
+			<p>Cette propriété a 3 valeurs possibles&nbsp;:</p>
+
+			<ul class="liste_valeur">
+				<li><code>auto</code></li>
+				<li><code>balance</code></li>
+				<li><code>balance-all</code></li>
+			</ul>
+
+			<p>La valeur par défaut est&nbsp;:<code>balance</code>.</p>
+
+			<div class="exemple">
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple contenant_columns exemple_column-fill">
+						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore beatae molestiae est impedit eaque aspernatur in natus unde repellat, sunt ut cum iusto eius, ducimus dolores explicabo quo? Consectetur animi, accusantium laboriosam nobis ea ullam praesentium esse hic sint dolore in saepe illo.
+						</p>
+					</div>
+					<button aria-label="Bouton voir code : column-fill" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.enveloppe_modale &gt; .contenant_columns { 
+<!--                 	    -->	height: 250px;
+<!--                 	    -->	max-width: 600px;
+<!--                 	    -->}
+
+<!--                 	    -->.exemple_column-fill { 
+<!--                 	    -->	columns: 3;
+<!--                 	    -->	column-fill: auto;
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="Bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+			</div>
+
+
+			<h4><code>column-gap</code></h4>
+
+			<p>La propriété <dfn>column-gap</dfn> permet de définir l'espace qui se trouve entre 2 colonnes.</p>
+
+			<p>La valeur par défaut est&nbsp;:<code>normal</code>.</p>
+
+			<div class="exemple">
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple contenant_columns exemple_column-gap">
+						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore beatae molestiae est impedit eaque aspernatur in natus unde repellat, sunt ut cum iusto eius, ducimus dolores explicabo quo? Consectetur animi, accusantium laboriosam nobis ea ullam praesentium esse.
+						</p>
+					</div>
+					<button aria-label="Bouton voir code : column-gap" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.enveloppe_modale &gt; .contenant_columns { 
+<!--                 	    -->	height: 250px;
+<!--                 	    -->	max-width: 600px;
+<!--                 	    -->}
+
+<!--                 	    -->.exemple_column-gap { 
+<!--                 	    -->	columns: 2;
+<!--                 	    -->	column-gap: 5rem;
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="Bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+			</div>
+
+			<h4><code>column-rule</code></h4>
+
+			<p>La propriété <dfn>column-rule</dfn> est une propriété raccourcie qui permet de définir&nbsp;:</p>
+
+			<ul class="liste_valeur">
+				<li><code>column-rule-width</code></li>
+				<li><code>column-rule-style</code></li>
+				<li><code>column-rule-color</code></li>
+			</ul>
+
+			<p>La valeur par défaut est&nbsp;: <code>medium none color</code>.</p>
+
+			<div class="exemple">
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple contenant_columns exemple_column-rule">
+						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore beatae molestiae est impedit eaque aspernatur in natus unde repellat, sunt ut cum iusto eius, ducimus dolores explicabo quo? Consectetur animi, accusantium laboriosam nobis ea ullam praesentium esse hic sint dolore in saepe illo.
+						</p>
+					</div>
+					<button aria-label="Bouton voir code : column-rule" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.enveloppe_modale &gt; .contenant_columns { 
+<!--                 	    -->	height: 250px;
+<!--                 	    -->	max-width: 600px;
+<!--                 	    -->}		
+
+<!--                 	    -->.exemple_column-rule { 
+<!--                 	    -->	columns: 2;
+<!--                 	    -->	column-rule: 1rem dashed #f95d9b;
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="Bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+			</div>
+
+			<h4><code>column-span</code></h4>
+
+			<p>La propriété <dfn>column-span</dfn> permet de définir combien de colonne prend un élément.</p>
+
+			<p>Cette propriété à 2 valeurs possibles&nbsp;:</p>
+
+			<ul class="liste_valeur">
+				<li><code>none</code></li>
+				<li><code>all</code></li>
+			</ul>
+
+			<p>La valeur par défaut est&nbsp;:<code>medium none none</code>.</p>
+
+			<div class="exemple">
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple contenant_columns exemple_column-span">
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore beatae molestiae est impedit eaque aspernatur in natus unde repellat, sunt ut cum iusto eius.</p>
+					</div>
+					<button aria-label="Bouton voir code : column-span" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.enveloppe_modale &gt; .contenant_columns { 
+<!--                 	    -->	height: 250px;
+<!--                 	    -->	max-width: 600px;
+<!--                 	    -->}	
+
+<!--                 	    -->.exemple_column-span { 
+<!--                 	    -->	columns: 4;
+<!--                 	    -->}
+
+<!--                 	    -->.exemple_column-span &gt; p:first-child { 
+<!--                 	    -->	background: #39a0ca;
+<!--                 	    -->	color: #161748;
+<!--                 	    -->	column-span: all;
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="Bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+			</div>
+
+			<h4><code>column-width</code></h4>
+
+			<p>La propriété <dfn>column-width</dfn> permet de définir la largeur idéale des colonnes.</p>
+			<p>La valeur par défaut est&nbsp;:<code>auto</code>.</p>
+
+			<div class="exemple">
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple contenant_columns exemple_column-width">
+						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore beatae molestiae est impedit eaque aspernatur in natus unde repellat, sunt ut cum iusto eius, ducimus dolores explicabo quo? Consectetur animi, accusantium laboriosam nobis ea ullam praesentium esse hic sint dolore in saepe illo.</p>
+					</div>
+					<button aria-label="Bouton voir code : column-width" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.enveloppe_modale &gt; .contenant_columns { 
+<!--                 	    -->	height: 250px;
+<!--                 	    -->	max-width: 600px;
+<!--                 	    -->}
+
+<!--                 	    -->.exemple_column-width { 
+<!--                 	    -->	column-width: 10rem;
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="Bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+			</div>
+
+		</section>
+	<!-- D -->
+		<section>
+			<h2 id="lettre_d">D</h2>
+			<h3>Dessiner des formes</h3>
+
+			<h3>Formes</h3>
+
+			<p>Il est possible de créer plusieurs formes dans le html à l'aide du css. Plusieurs propriétés sont pratiques pour créer des formes dont <code>transform</code>, <code>border</code>, <code>position</code>, etc. Il est aussi pratique d'utiliser les pseudo-sélecteurs tels que <code>:before</code> et <code>:after</code>.</p>
+
+
+			<p><a href="https://cssbattle.dev/" target="_blank">CSS battle</a> est un bon site pour se pratiquer à dessiner avec CSS.</p>
+
+			<div class="exemple">
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple">
+						<div class="chevron"></div>
+					</div>
+					<button aria-label="Bouton voir code : forme - chevron" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.contenant_exemple { 
+<!--                 	    -->	position : relative;
+<!--                 	    -->}
+
+<!--                 	    -->.chevron::before, 
+<!--                 	    -->.chevron::after {
+<!--                 	    -->	content: '';
+<!--                 	    -->	background: #f95d9b;
+<!--                 	    -->	height: 50px;
+<!--                 	    -->	width: 80px;
+<!--                 	    -->	position: absolute;
+<!--                 	    -->	top: 35%;
+<!--                 	    -->}
+
+<!--                 	    -->.chevron::before { 
+<!--                 	    -->	left: 50%; 
+<!--                 	    -->	transform: skew(0, 50deg);
+<!--                 	    -->}
+
+<!--                 	    -->.chevron::after { 
+<!--                 	    -->	right: 50%;
+<!--                 	    -->	transform: skew(0, -50deg)
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+				<div class="enveloppe_modale">
+
+					<div class="contenant_exemple">
+						<div class="triangle"></div>
+					</div>
+					<button aria-label="Bouton voir code : forme - triangle" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.contenant_exemple { 
+<!--                 	    -->	position : relative;
+<!--                 	    -->}
+
+<!--                 	    -->.triangle { 
+<!--                 	    -->	border:5px solid transparent;
+<!--                 	    -->	border-left-color: #f95d9b;
+<!--                 	    -->	border-width: 0 100px 150px 150px;
+<!--                 	    -->	margin: auto; 
+<!--                 	    -->	position: absolute;
+<!--                 	    -->	left: 10%;
+<!--                 	    -->	top: 10%; 
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="Bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple">
+						<div class="infini"></div>
+					</div>
+					<button aria-label="Bouton voir code : forme - infini" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.contenant_exemple { 
+<!--                 	    -->	position : relative;
+<!--                 	    -->}
+
+<!--                 	    -->.infini::before, 
+<!--                 	    -->	content: "";
+<!--                 	    -->.infini::after {
+<!--                 	    -->	border: 20px solid #f95d9b;
+<!--                 	    -->	height: 45px;
+<!--                 	    -->	width: 45px;
+<!--                 	    -->	position: absolute;
+<!--                 	    -->	top: 30%;
+<!--                 	    -->}
+
+<!--                 	    -->.infini::before {
+<!--                 	    -->	content: "";
+<!--                 	    -->	border-radius: 50px 50px 0 50px;
+<!--                 	    -->	left: 15%;
+<!--                 	    -->	transform: rotate(-45deg);
+}
+
+<!--                 	    -->.infini::after {
+<!--                 	    -->	content: "";
+<!--                 	    -->	border-radius: 0 50px 50px 50px;
+<!--                 	    -->	transform: rotate(-45deg);
+<!--                 	    -->	right: 15%;
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="Bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple">
+						<div class="loupe"></div>
+					</div>
+					<button aria-label="Bouton voir code : forme - loupe" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.contenant_exemple { 
+<!--                 	    -->	position : relative;
+<!--                 	    -->}
+
+<!--                 	    -->.loupe { 
+<!--                 	    -->	border: 20px solid #f95d9b;
+<!--                 	    -->	border-radius: 50%;
+<!--                 	    -->	height: 100px;
+<!--                 	    -->	width: 100px;
+<!--                 	    -->	margin: 10px;
+<!--                 	    -->}
+	
+<!--                 	    -->.loupe::after{ 
+<!--                 	    -->	content: '';
+<!--                 	    -->	background: #f95d9b;
+<!--                 	    -->	height: 100px;
+<!--                 	    -->	width: 20px;
+<!--                 	    -->	position: absolute;
+<!--                 	    -->	bottom: 0;
+<!--                 	    -->	right: 75px;
+<!--                 	    -->	transform: rotate(-50deg);
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="Bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple">
+						<div class="coeur"></div>
+					</div>
+					<button aria-label="Bouton voir code : forme - coeur" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.contenant_exemple { 
+<!--                 	    -->	position : relative;
+<!--                 	    -->}
+
+<!--                 	    -->.coeur::before, 
+<!--                 	    -->.coeur::after { 
+<!--                 	    -->	content: ''; 
+<!--                 	    -->	background: var(--accent);
+<!--                 	    -->	border-radius: 50px 50px 0 0;
+<!--                 	    -->	height: 150px;
+<!--                 	    -->	width: 100px;
+<!--                 	    -->	position: absolute;
+<!--                 	    -->	top: 20px;
+<!--                 	    -->}
+
+<!--                 	    -->.coeur::before { 
+<!--                 	    -->	transform: rotate(-45deg);
+<!--                 	    -->	left: 57px;
+<!--                 	    -->}
+
+<!--                 	    -->.coeur::after { 
+<!--                 	    -->	right: 57px;
+<!--                 	    -->	transform: rotate(45deg);
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="Bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple">
+						<div class="lune"></div>
+					</div>
+					<button aria-label="Bouton voir code : forme - lune" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.contenant_exemple { 
+<!--                 	    -->	position : relative;
+<!--                 	    -->}
+
+<!--                 	    -->.lune { 
+<!--                 	    -->	border-radius: 50%;
+<!--                 	    -->	box-shadow: 50px 20px 0 #f95d9b;
+<!--                 	    -->	height: 150px;
+<!--                 	    -->	width: 150px;
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple">
+						<div class="bulle"></div>
+					</div>
+					<button aria-label="Bouton voir code : forme - bulle" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.contenant_exemple { 
+<!--                 	    -->	position : relative;
+<!--                 	    -->}
+
+<!--                 	    -->.bulle { 
+<!--                 	    -->	background: #f95d9b;
+<!--                 	    -->	border-radius: 30px;
+<!--                 	    -->	height: 100px;
+<!--                 	    -->	left: 25px;
+<!--                 	    -->	position: absolute;
+<!--                 	    -->	top: 25px;
+<!--                 	    -->	width: 200px;
+<!--                 	    -->}
+
+<!--                 	    -->.bulle::after { 
+<!--                 	    -->	content: '';
+<!--                 	    -->	border:5px solid transparent;
+<!--                 	    -->	border-right-color: #f95d9b;
+<!--                 	    -->	border-width: 0 50px 50px 50px;
+<!--                 	    -->	margin: auto; 
+<!--                 	    -->	position: absolute;
+<!--                 	    -->	bottom: -45px; 
+<!--                 	    -->	left: 10%;
+<!--                 	    -->	right: 20px;
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="Bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple">
+						<div class="lunette"></div>
+					</div>
+					<button aria-label="Bouton voir code : forme - lunette" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.contenant_exemple { 
+<!--                 	    -->	position : relative;
+<!--                 	    -->}	
+
+<!--                 	    -->.lunette { 
+<!--                 	    -->	background: #f95d9b;
+<!--                 	    -->	height: 20px;
+<!--                 	    -->	width: 40px;
+<!--                 	    -->	position: absolute;
+<!--                 	    -->	left: 42%;
+<!--                 	    -->	top: 42%;
+<!--                 	    -->}
+
+<!--                 	    -->.lunette::before, 
+<!--                 	    -->.lunette::after { 
+<!--                 	    -->	content: '';
+<!--                 	    -->	border: 20px solid #f95d9b;
+<!--                 	    -->	border-radius: 50%;
+<!--                 	    -->	height: 72px;
+<!--                 	    -->	width: 72px;
+<!--                 	    -->	position: absolute;
+<!--                 	    -->	top: -40px;
+<!--                 	    -->}
+
+<!--                 	    -->.lunette::before { 
+<!--                 	    -->	left: -100px;
+<!--                 	    -->}
+
+<!--                 	    -->.lunette::after{ 
+<!--                 	    -->	right: -100px;
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple">
+						<div class="etoile"></div>
+					</div>
+					<button aria-label="Bouton voir code : forme - etoile" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.contenant_exemple { 
+<!--                 	    -->	position : relative;
+<!--                 	    -->}	
+
+<!--                 	    -->.etoile::before,
+<!--                 	    -->.etoile::after { 
+<!--                 	    -->	content: '';
+<!--                 	    -->	border-left: 75px solid transparent;
+<!--                 	    -->	border-right: 75px solid transparent;
+<!--                 	    -->	border-top: 150px solid var(--accent);
+<!--                 	    -->	left: 50px;
+<!--                 	    -->	position: absolute;
+<!--                 	    -->}
+
+<!--                 	    -->.etoile::before { 
+<!--                 	    -->	transform: rotate(180deg);
+<!--                 	    -->	top: 2px;
+<!--                 	    -->}
+
+<!--                 	    -->.etoile::after { 
+<!--                 	    -->	top: 25%;
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="Bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+			</div>
+			
+		</section>
+	<!-- F -->
+		<section>
+			<h2 id="lettre_f">F</h2>
+
+			<h3>Les filtres</h3>
+
+			<p>Il est possible de rajouter des effets sur des éléments avec des filtres.</p>
+
+			<p>Nous utilisons principalement les filtres sur des images.</p>
+
+			<h4><code>filter</code></h4>
+
+			<p>La propriété <dfn>filter</dfn> permet d'obtenir des effets sur un élément.</p> 
+
+			<p>Elle regroupe plusieurs valeurs dont&nbsp;:</p>
+
+			<ul class="liste_valeur">
+				<li>blur</li>
+				<li>brightness</li>
+				<li>contrast</li>
+				<li>drop-shadow</li>
+				<li>invert</li>
+				<li>opacity</li>
+			</ul>
+
+			<p>La valeur par défaut est&nbsp;:<code>none</code>.</p>
+			
+			<div class="exemple">
+				<div class="enveloppe_modale">
+					<figure>
+						<img src="images/filter_dragon.png" alt="Image d'un dragon avec aucun filtre">
+						<figcaption>Image original sans filtre</figcaption>
+					</figure>
+				</div>
+				<div class="enveloppe_modale">
+					<figure>
+						<img class="filter_blur" src="images/filter_dragon.png" alt="Image d'un dragon avec aun effet de blur">
+						<figcaption>Image original avec blur</figcaption>
+					</figure>
+					<button aria-label="Bouton voir code : filtre blur" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.filter_blur { 
+<!--                 	    -->	filter: blur(5px);
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="Bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+				<div class="enveloppe_modale">
+					<figure>
+						<img class="filter_brightness" src="images/filter_dragon.png" alt="Image d'un dragon avec un effet de brightness">
+						<figcaption>Image original avec brightness</figcaption>
+					</figure>
+					<button aria-label="Bouton voir code : filtre brightness" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.filter_brightness { 
+<!--                 	    -->	filter: brightness(50%);
+<!--                 	    -->}								
+							</code>
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+				<div class="enveloppe_modale">
+					<figure>
+						<img class="filter_contrast" src="images/filter_dragon.png" alt="Image d'un dragon avec un effet de contrast">
+						<figcaption>Image original avec contrast</figcaption>
+					</figure>
+					<button aria-label="Bouton voir code : filtre contrast" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.filter_contrast { 
+<!--                 	    -->	filter: contrast(50%);
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+				<div class="enveloppe_modale">
+					<figure>
+						<img class="filter_drop-shadow" src="images/filter_dragon.png" alt="Image d'un dragon avec un effet de shadow">
+						<figcaption>Image original avec drop-shadow</figcaption>
+					</figure>
+					<button aria-label="Bouton voir code : filtre drop-shadow" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>	
+
+<!--                 	    -->.filter_drop-shadow { 
+<!--                 	    -->	filter: drop-shadow( 0 10px 10px var(--noir));
+<!--                 	    -->}	
+
+							</code>
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+				<div class="enveloppe_modale">
+					<figure>
+						<img class="filter_grayscale" src="images/filter_dragon.png" alt="Image d'un dragon avec un effet de grayscale">
+						<figcaption>Image original avec grayscale</figcaption>
+					</figure>
+					<button aria-label="Bouton voir code : filtre grayscale" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.filter_grayscale { 
+<!--                 	    -->	filter: grayscale(85%);
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+				<div class="enveloppe_modale">
+					<figure>
+						<img class="filter_hue-rotate" src="images/filter_dragon.png" alt="Image d'un dragon avec un effet hue-rotate">
+						<figcaption>Image original avec hue rotate</figcaption>
+					</figure>
+					<button aria-label="Bouton voir code : filtre rotate" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.filter_hue-rotate { 
+<!--                 	    -->	filter: hue-rotate(300deg);
+<!--                 	    -->}								
+							</code>
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+
+				<div class="enveloppe_modale">
+					<figure>
+						<img class="filter_invert" src="images/filter_dragon.png" alt="Image d'un dragon avec un effet invert.">
+						<figcaption>Image original avec invert</figcaption>
+					</figure>
+					<button aria-label="Bouton voir code : filtre invert" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.filter_invert { 
+<!--                 	    -->	filter: invert(100%);
+<!--                 	    -->}	
+
+							</code>
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+
+				<div class="enveloppe_modale">
+					<figure>
+						<img class="filter_opacity" src="images/filter_dragon.png" alt="Image d'un dragon avec un effet sur l'opacité.">
+						<figcaption>Image original avec opacity</figcaption>
+					</figure>
+					<button aria-label="Bouton voir code : filtre opacity" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.filter_opacity { 
+<!--                 	    -->	filter: opacity(50%);
+<!--                 	    -->} 
+
+							</code>
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+
+				<div class="enveloppe_modale">
+				<figure>
+						<img class="filter_saturation" src="images/filter_dragon.png" alt="Image d'un dragon avec un effet sur la saturation.">
+						<figcaption>Image original avec saturation</figcaption>
+					</figure>
+					<button aria-label="Bouton voir code : filtre saturation" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.filter_saturation { 
+<!--                 	    -->	filter: saturate(400%);
+<!--                 	    -->} 
+								
+							</code>
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+
+				<div class="enveloppe_modale">
+					<figure>
+						<img class="filter_sepia" src="images/filter_dragon.png" alt="Image d'un dragon avec un effet sur sepia.">
+						<figcaption>Image original avec sepia</figcaption>
+					</figure>
+					<button aria-label="Bouton voir code : filtre sepia" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.filter_sepia { 
+<!--                 	    -->	filter: sepia(50%);
+<!--                 	    -->} 
+
+							</code>
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+
+				<div class="enveloppe_modale">
+				<figure>
+						<img class="filter_multiples" src="images/filter_dragon.png" alt="Image d'un dragon avec multiples effets.">
+						<figcaption>Image original avec plusieurs filtres</figcaption>
+					</figure>
+					<button aria-label="Bouton voir code : filtre multi" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.filter_multiples { 
+<!--                 	    -->	filter: contrast(50%) 
+<!--                 	    -->	brightness(120%) 
+<!--                 	    -->	saturate(500%)
+<!--                 	    -->	invert(80%);
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+			</div>
+		</section>
+	<!-- G -->
+		<section>
+			<h2 id="lettre_g">G</h2>
+
+			<h3>Gradient</h3>
+			<p>Il est possible de créer un dégradé avec 2 couleurs ou plus. </p>
+
+			<h4><code>gradient</code></h4>
+
+			<p>Une valeur de type <dfn>gradient</dfn> est en fait une image sans dimension intrinsèque.</p>
+
+			<div class="exemple">
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple exemple_gradient_1"></div>
+					<button aria-label="Bouton voir code : gradient 1" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.exemple_gradient_1 { 
+<!--                 	    -->	background: linear-gradient(#f95d9b, #39a0ca);
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple exemple_gradient_2"></div>
+					<button aria-label="Bouton voir code : gradient 2" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.exemple_gradient_2 { 
+<!--                 	    -->	background: radial-gradient(#f95d9b, #39a0ca);
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple exemple_gradient_3"></div>
+					<button aria-label="Bouton voir code : gradient 3" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.exemple_gradient_3 { 
+<!--                 	    -->	background: repeating-linear-gradient(#f95d9b, #39a0ca 20px);
+<!--                 	    -->}	
+
+							</code>
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple exemple_gradient_4"></div>
+					<button aria-label="Bouton voir code : gradient 4" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.exemple_gradient_4 {
+<!--                 	    -->	background: repeating-radial-gradient(#f95d9b, #39a0ca 20px);
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple exemple_gradient_5"></div>
+					<button aria-label="Bouton voir code : gradient 5" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.exemple_gradient_5 {
+<!--                 	    -->	background: conic-gradient(#f95d9b, #39a0ca);
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+			</div>
+			
+		</section>
+	<!-- H -->
+		<section>
+			<h2 id="lettre_h">H</h2>
+
+			<h3>Hyphens</h3>
+			<p>Hyphens est une manière de définir comment gérer les traits d'union lors des sauts de ligne.</p>
+
+			<h4><code>hyphens</code></h4>
+			<p>Les 3 valeurs principales de la propriété <dfn>hyphens</dfn> sont&nbsp;:</p>
+
+			<ul class="liste_valeur">
+				<li><code>none</code></li>
+				<li><code>manal</code></li>
+				<li><code>auto</code></li>
+			</ul>
+
+			<p>La valeur par défaut est&nbsp;:<code>manual</code>.</p>
+
+			<div class="exemple">
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple hyphens_none">
+					<p>La définition du mot hippopotomonstrosesquippedaliophobie&nbsp;: Peur des mots longs.</p>
+					</div>
+					<button aria-label="Bouton voir code : hyphen none" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.hyphens_none { 
+<!--                 	    -->	hyphens: none;
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>	
+				
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple hyphens_auto">
+					<p>La définition du mot hippopotomonstrosesquippedaliophobie&nbsp;: Peur des mots longs.</p>
+					</div>
+					<button aria-label="Bouton voir code : hyphens auto" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.hyphens_auto { 
+<!--                 	    -->	hyphens: auto;
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+			</div>	
+
+			<p><small>Note&nbsp;: Attention! Propriété peu implantée dans les navigateurs.</small></p>
+
+		</section>
+	<!-- M -->
+		<section>
+			<h2 id="lettre_m">M</h2>
+
+			<h3>Mix-blend Mode</h3>
+			<p>Il est possible de mélanger les couleurs d'un élément avec l'arrière-plan (background) de son parent ou avec d'autres éléments. Afin que l'arrière-plan ne soit pas pris en compte, il faut utiliser la propriété <code>isolation</code>.</p>
+
+			<h4><code>mix-blend-mode</code></h4>
+
+			<p>La propriété <dfn>mix-blend-mode</dfn> permet de mélanger un élément avec son arrière-plan ou avec d'autres éléments.</p>
+
+			<p>Elle a plusieurs valeurs possibles dont&nbsp;:</p>
+
+			<ul class="liste_valeur">
+				<li><code>normal</code></li>
+				<li><code>multiply</code></li>
+				<li><code>hard-light</code></li>
+				<li><code>difference</code></li>
+				<li><code>darken</code></li>
+				<li><code>hue</code></li>
+			</ul>
+
+			<p>La valeur par défaut est&nbsp;:<code>normal</code>.</p>
+
+			<div class="exemple">
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple mix-blend-mode">
+						<div class="rouge"></div>
+						<div class="vert"></div>
+						<div class="bleu"></div>
+					</div>
+					<button aria-label="Bouton voir code : mix-blend-mode" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.mix-blend-mode { 
+<!--                 	    -->	align-items: center;
+<!--                 	    -->	display: flex;
+<!--                 	    -->	flex-wrap: wrap;
+<!--                 	    -->	isolation: isolate;
+<!--                 	    -->	justify-content: center;
+<!--                 	    -->  	position: relative;
+<!--                 	    -->}
+
+<!--                 	    -->.mix-blend-mode &gt; * {
+<!--                 	    -->	border-radius: 50%;
+<!--                 	    -->	height: 115px;
+<!--                 	    -->	position: absolute;
+<!--                 	    -->	width: 115px;
+<!--                 	    -->}
+
+<!--                 	    -->.mix-blend-mode &gt; .rouge {
+<!--                 	    -->	background: rgb(201, 55, 84);
+<!--                 	    -->	top: 20px;
+<!--                 	    -->}
+
+<!--                 	    -->.mix-blend-mode &gt; .vert {
+<!--                 	    -->	background: rgb(55, 201, 104);
+<!--                 	    -->	left: 20px;
+<!--                 	    -->	bottom: 20px;
+<!--                 	    -->}
+
+<!--                 	    -->.mix-blend-mode &gt; .bleu {
+<!--                 	    -->	background: rgb(55, 123, 201);
+<!--                 	    -->	right: 20px;
+<!--                 	    -->	bottom: 20px;
+<!--                 	    -->}
+							</code>
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple mix-blend-mode darken">
+						<div class="rouge darken"></div>
+						<div class="vert darken"></div>
+						<div class="bleu darken"></div>
+					</div>
+					<button aria-label="Bouton voir code : mix-blend-mode darken" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.mix-blend-mode { 
+<!--                 	    -->	align-items: center;
+<!--                 	    -->	display: flex;
+<!--                 	    -->	flex-wrap: wrap;
+<!--                 	    -->	isolation: isolate;
+<!--                 	    -->	justify-content: center;
+<!--                 	    -->	position: relative;
+<!--                 	    -->}
+
+<!--                 	    -->.mix-blend-mode &gt; * {
+<!--                 	    -->	border-radius: 50%;
+<!--                 	    -->	height: 115px;
+<!--                 	    -->	position: absolute;
+<!--                 	    -->	width: 115px;
+<!--                 	    -->}
+
+<!--                 	    -->.mix-blend-mode &gt; .rouge {
+<!--                 	    -->	background: rgb(201, 55, 84);
+<!--                 	    -->	top: 20px;
+<!--                 	    -->}
+
+<!--                 	    -->.mix-blend-mode &gt; .vert {
+<!--                 	    -->	background: rgb(55, 201, 104);
+<!--                 	    -->	bottom: 20px;
+<!--                 	    -->	left: 20px;
+<!--                 	    -->}
+
+<!--                 	    -->.mix-blend-mode &gt; .bleu {
+<!--                 	    -->	background: rgb(55, 123, 201);
+<!--                 	    -->	bottom: 20px;
+<!--                 	    -->	right: 20px;
+<!--                 	    -->}
+
+<!--                 	    -->.darken { 
+<!--                 	    -->	mix-blend-mode: darken;
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple mix-blend-mode">
+						<div class="rouge hard-light"></div>
+						<div class="vert hard-light"></div>
+						<div class="bleu hard-light"></div>
+					</div>
+					<button aria-label="Bouton voir code : mix-blend-mode hard-light" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.mix-blend-mode { 
+<!--                 	    -->	align-items: center;
+<!--                 	    -->	display: flex;
+<!--                 	    -->	flex-wrap: wrap;
+<!--                 	    -->	isolation: isolate;
+<!--                 	    -->	justify-content: center;
+<!--                 	    --> 	position: relative;
+<!--                 	    -->}
+
+<!--                 	    -->.mix-blend-mode &gt; * {
+<!--                 	    -->	border-radius: 50%;
+<!--                 	    -->	height: 115px;
+<!--                 	    -->	position: absolute;
+<!--                 	    -->	width: 115px;
+<!--                 	    -->}
+
+<!--                 	    -->.mix-blend-mode &gt; .rouge {
+<!--                 	    -->	background: rgb(201, 55, 84);
+<!--                 	    -->	top: 20px;
+<!--                 	    -->}
+
+<!--                 	    -->.mix-blend-mode &gt; .vert {
+<!--                 	    -->	background: rgb(55, 201, 104);
+<!--                 	    -->	bottom: 20px;
+<!--                 	    -->	left: 20px;
+<!--                 	    -->}
+
+<!--                 	    -->.mix-blend-mode &gt; .bleu {
+<!--                 	    -->	background: rgb(55, 123, 201);
+<!--                 	    -->	right: 20px;
+<!--                 	    -->	bottom: 20px;
+<!--                 	    -->}
+
+<!--                 	    -->.hard-light { 
+<!--                 	    -->	mix-blend-mode: hard-light;
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+
+				<div class="enveloppe_modale">
+				<div class="contenant_exemple mix-blend-mode">
+					<div class="rouge difference"></div>
+					<div class="vert difference"></div>
+					<div class="bleu difference"></div>
+				</div>
+				<button aria-label="Bouton voir code : mix-blend-mode difference" class="modale_btn"><i class="fas fa-code"></i></button>
+				<div class="modale">
+					<pre tabindex="0">
+						<code>
+
+<!--                 	    -->.mix-blend-mode { 
+<!--                 	    -->	align-items: center;
+<!--                 	    -->	display: flex;
+<!--                 	    -->	flex-wrap: wrap;
+<!--                 	    -->	isolation: isolate;
+<!--                 	    --> 	position: relative;
+<!--                 	    -->	justify-content: center;
+<!--                 	    -->}
+
+<!--                 	    -->.mix-blend-mode &gt; * {
+<!--                 	    -->	border-radius: 50%;
+<!--                 	    -->	height: 115px;
+<!--                 	    -->	position: absolute;
+<!--                 	    -->	width: 115px;
+<!--                 	    -->}
+
+<!--                 	    -->.mix-blend-mode &gt; .rouge {
+<!--                 	    -->	background: rgb(201, 55, 84);
+<!--                 	    -->	top: 20px;
+<!--                 	    -->}
+
+<!--                 	    -->.mix-blend-mode &gt; .vert {
+<!--                 	    -->	background: rgb(55, 201, 104);
+<!--                 	    -->	bottom: 20px;
+<!--                 	    -->	left: 20px;
+<!--                 	    -->}
+
+<!--                 	    -->.mix-blend-mode &gt; .bleu {
+<!--                 	    -->	background: rgb(55, 123, 201);
+<!--                 	    -->	bottom: 20px;
+<!--                 	    -->	right: 20px;
+<!--                 	    -->}
+
+<!--                 	    -->.difference { 
+<!--                 	    -->	mix-blend-mode: difference;
+<!--                 	    -->}
+
+						</code>
+					</pre>
+					<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+				</div>
+			</div>
+
+			<div class="enveloppe_modale">
+				<div class="contenant_exemple mix-blend-mode">
+					<div class="rouge screen"></div>
+					<div class="vert screen"></div>
+					<div class="bleu screen"></div>
+				</div>
+				<button aria-label="Bouton voir code : mix-blend-mode screen" class="modale_btn"><i class="fas fa-code"></i></button>
+				<div class="modale">
+					<pre tabindex="0">
+						<code>
+
+<!--                 	    -->.mix-blend-mode { 
+<!--                 	    -->	align-items: center;
+<!--                 	    -->	display: flex;
+<!--                 	    -->	flex-wrap: wrap;
+<!--                 	    --> 	position: relative;
+<!--                 	    -->	isolation: isolate;
+<!--                 	    -->	justify-content: center;
+<!--                 	    -->}
+
+<!--                 	    -->.mix-blend-mode &gt; * {
+<!--                 	    -->	border-radius: 50%;
+<!--                 	    -->	height: 115px;
+<!--                 	    -->	position: absolute;
+<!--                 	    -->	width: 115px;
+<!--                 	    -->}
+
+<!--                 	    -->.mix-blend-mode &gt; .rouge {
+<!--                 	    -->	background: rgb(201, 55, 84);
+<!--                 	    -->	top: 20px;
+<!--                 	    -->}
+
+<!--                 	    -->.mix-blend-mode &gt; .vert {
+<!--                 	    -->	background: rgb(55, 201, 104);
+<!--                 	    -->	bottom: 20px;
+<!--                 	    -->	left: 20px;
+<!--                 	    -->}
+
+<!--                 	    -->.mix-blend-mode &gt; .bleu {
+<!--                 	    -->	background: rgb(55, 123, 201);
+<!--                 	    -->	bottom: 20px;
+<!--                 	    -->	right: 20px;
+<!--                 	    -->}
+
+<!--                 	    -->.screen {
+<!--                 	    -->	mix-blend-mode: screen;
+<!--                 	    -->}
+
+						</code>
+					</pre>
+					<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+				</div>
+			</div>
+
+			<div class="enveloppe_modale">
+				<div class="contenant_exemple mix-blend-mode">
+					<div class="rouge exclusion"></div>
+					<div class="vert exclusion"></div>
+					<div class="bleu exclusion"></div>
+				</div>
+				<button aria-label="Bouton voir code : mix-blend-mode exclusion" class="modale_btn"><i class="fas fa-code"></i></button>
+				<div class="modale">
+					<pre tabindex="0">
+						<code>
+
+<!--                 	    -->.mix-blend-mode { 
+<!--                 	    -->	align-items: center;
+<!--                 	    -->	display: flex;
+<!--                 	    -->	flex-wrap: wrap;
+<!--                 	    -->	isolation: isolate;
+<!--                 	    -->	justify-content: center;
+<!--                 	    --> 	position: relative;
+<!--                 	    -->	width: 250px;
+<!--                 	    -->}
+
+<!--                 	    -->.mix-blend-mode &gt; * {
+<!--                 	    -->	border-radius: 50%;
+<!--                 	    -->	height: 115px;
+<!--                 	    -->	position: absolute;
+<!--                 	    -->	width: 115px;
+<!--                 	    -->}
+
+<!--                 	    -->.mix-blend-mode &gt; .rouge {
+<!--                 	    -->	background: rgb(201, 55, 84);
+<!--                 	    -->	top: 20px;
+<!--                 	    -->}
+
+<!--                 	    -->.mix-blend-mode &gt; .vert {
+<!--                 	    -->	background: rgb(55, 201, 104);
+<!--                 	    -->	bottom: 20px;
+<!--                 	    -->	left: 20px;
+<!--                 	    -->}
+
+<!--                 	    -->.mix-blend-mode &gt; .bleu {
+<!--                 	    -->	background: rgb(55, 123, 201);
+<!--                 	    -->	bottom: 20px;
+<!--                 	    -->	right: 20px;
+<!--                 	    -->}
+
+<!--                 	    -->.exclusion { 
+<!--                 	    -->	mix-blend-mode: exclusion;
+<!--                 	    -->}
+
+						</code>
+					</pre>
+					<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+				</div>
+
+			</div>
+			</div>
+		</section>
+	<!-- O -->
+		<section>
+			<h2 id="lettre_o">O</h2>
+
+			<h3>Overflow</h3>
+
+			<p>Lorsqu'un élément est plus grand que son conteneur, il peut être intéressant de pouvoir déterminer le comportement de cet élément.</p>
+
+			<h4><code>overflow</code></h4>
+
+			<p>La propriété <dfn>overflow</dfn> détermine comment afficher un élément qui est plus grand que son conteneur.</p>
+
+			<p>Les valeurs possibles sont&nbsp;:</p>
+
+			<ul class="liste_valeur">
+				<li><code>visible</code></li>
+				<li><code>hidden</code></li>
+				<li><code>scroll</code></li>
+				<li><code>auto</code></li>
+			</ul>
+
+			<p>La valeur par défaut est&nbsp;: <code>visible</code>.</p>
+
+			<div class="exemple">
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple overflow_visible">
+						<img class="img_renard" src="images/renard.png" alt="Un renard dans un conteneur qui est overflow visible">
+					</div>
+					<button aria-label="Bouton voir code : overflow visible" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.contenant_exemple {
+<!--                 	    -->	height: 200px;
+<!--                 	    -->	width: 250px;
+<!--                 	    -->}
+
+<!--                 	    -->.img_renard { 
+<!--                 	    -->	width: 300px;
+<!--                 	    -->}
+
+<!--                 	    -->.overflow_visible { 
+<!--                 	    -->	overflow: visible;
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+				
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple overflow_hidden">
+						<img class="img_renard" src="images/renard.png" alt="Un renard dans un conteneur qui est overflow visible">
+					</div>
+					<button aria-label="Bouton voir code : overflow hidden" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.contenant_exemple {
+<!--                 	    -->	height: 200px;
+<!--                 	    -->	width: 250px;
+<!--                 	    -->}
+
+<!--                 	    -->.img_renard { 
+<!--                 	    -->	width: 300px;
+<!--                 	    -->}
+
+<!--                 	    -->.overflow_hidden { 
+<!--                 	    -->	overflow: hidden;
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="Bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+				
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple overflow_scroll" tabindex="0">
+						<img class="img_renard" src="images/renard.png" alt="Un renard dans un conteneur qui est overflow visible">
+					</div>
+					<button aria-label="Bouton voir code : overflow scroll" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.contenant_exemple {
+<!--                 	    -->	height: 200px;
+<!--                 	    -->	width: 250px;
+<!--                 	    -->}
+
+<!--                 	    -->.img_renard { 
+<!--                 	    -->	width: 300px;
+<!--                 	    -->}
+
+<!--                 	    -->.overflow_scroll { 
+<!--                 	    -->	overflow: scroll;
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+				
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple overflow_auto" tabindex="0">
+						<img class="img_renard" src="images/renard.png" alt="Un renard dans un conteneur qui est overflow visible">
+					</div>
+					<button aria-label="Bouton voir code : overflow auto" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.img_renard { 
+<!--                 	    -->	width: 300px;
+<!--                 	    -->}
+
+<!--                 	    -->.overflow_auto {
+<!--                 	    -->	height: 250px; 
+<!--                 	    -->	overflow: auto;
+<!--                 	    -->	width: 350px;
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="Bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+
+			</div>	
+		</section>
+	<!-- P -->
+		<section>
+			<h2 id="lettre_p">P</h2>
+
+			<h3>Perseptive</h3>
+
+			<p>Il est possible de créer des éléments 3D avec dy CSS.</p>
+
+			<h4><code>perseptive</code></h4>
+
+			<p>La propriété <dfn>perseptive</dfn> permet d'établir la longeur de l'axe Z.</p>
+			
+			<p>La valeur par défaut est&nbsp;: <code>none</code>.</p>
+
+			<div class="exemple">
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple exemple_perseptive">
+							<div class="enfant"></div>
+						</div>
+					</div>
+					<button aria-label="Bouton voir code : perseptive" class="modale_btn perseptive_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.exemple_perseptive { 
+<!--                 	    -->	height: 200px;
+<!--                 	    -->	overflow: hidden;
+<!--                 	    -->	perspective: 100px;
+<!--                 	    -->	width: 250px;
+<!--                 	    -->}
+								
+<!--                 	    -->.exemple_perseptive &gt; .enfant { 
+<!--                 	    -->	background: #f95d9b;
+<!--                 	    -->	height: 250px;
+<!--                 	    -->	transform: rotateX(25deg);
+<!--                 	    -->	width: 250px;
+<!--                 	    -->}	
+
+							</code>
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+		</section>
+	<!-- R -->
+		<section>
+			<h2 id="lettre_r">R</h2>
+
+			<h3>Redimensionner</h3>
+
+			<p>Parfois, on souhaite permettre à l'utilisateur de changer la dimension d'un élément. Il est possible de déterminer comment l'objet grandira/réduira.</p>
+
+			<h4><code>resize</code></h4>
+
+			<p>La propriété <dfn>resize</dfn> permet de déterminer le sens dans lequel un élément change de dimension.</p>
+
+			<p>Les valeurs possibles sont&nbsp;:</p>
+
+			<ul class="liste_valeur">
+				<li><code>none</code></li>
+				<li><code>both</code></li>
+				<li><code>horizontal</code></li>
+				<li><code>vertical</code></li>
+			</ul>
+
+			<p>La valeur par défaut est&nbsp;: <code>none</code>.</p>
+
+			<div class="exemple redimensionner_display">
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple exemple_resize resize_none"></div>
+					<button aria-label="Bouton voir code : resize none" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.resize_none { 
+<!--                 	    -->	resize: none;
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple exemple_resize resize_both"></div>
+					<button aria-label="Bouton voir code : resize both" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.resize_both { 
+<!--                 	    -->	resize: both;
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple exemple_resize resize_horizontal"></div>
+					<button aria-label="Bouton voir code : resize horizontal" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.resize_horizontal { 
+<!--                 	    -->	resize: horizontal;
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple exemple_resize resize_vertical"></div>
+					<button aria-label="Bouton voir code : resize vertical" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.resize_vertical { 
+<!--                 	    -->	resize: vertical;
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>				
+			</div>
+
+		</section>
+	<!-- S -->
+		<section>
+			<h2 id="lettre_s">S</h2>
+
+			<h3>'Shadow'</h3>
+
+			<p>Avec CSS3 il est possible de mettre des ombres sur des éléments ainsi que du texte.</p>
+
+			<h4><code>box-shadow</code></h4>
+
+			<p>La propriété <dfn>box-shadow</dfn> permet de créer un ombrage sur une boite.</p>
+
+			<p>Les valeurs possibles sont&nbsp;:</p>
+
+			<ul class="liste_valeur">
+				<li><code>none</code></li>
+				<li><code>h-offset</code></li>
+				<li><code>v-offset</code></li>
+				<li><code>blur</code></li>
+				<li><code>spread</code></li>
+				<li><code>color</code></li>
+				<li><code>inset</code></li>
+				<li><code>initial</code></li>
+				<li><code>inherit</code></li>
+			</ul>
+
+			<p>La valeur par défaut est&nbsp;: <code>none</code>.</p>
+
+			<div class="exemple">
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple exemple_box-shadow_1"></div>
+					<button aria-label="Bouton voir code : box shadow 1" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.exemple_box-shadow_1 { 
+<!--                 	    -->	box-shadow: 20px 20px #f95d9b;
+<!--                 	    -->	margin: 50px auto;
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple exemple_box-shadow_2"></div>
+					<button aria-label="Bouton voir code : box shadow exemple 2" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.exemple_box-shadow_2 { 
+<!--                 	    -->	box-shadow: inset 20px 20px #f95d9b;
+<!--                 	    -->	margin: 50px auto;
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple exemple_box-shadow_3"></div>
+					<button aria-label="Bouton voir code : box shadow exemple 3" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.exemple_box-shadow_3 { 
+<!--                 	    -->	box-shadow: -20px 15px 10px 20px #f95d9b;
+<!--                 	    -->	margin: 50px auto;
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+			</div>
+
+			<p>Certaines personnes font de l'art avec cette propriété. Voici La Joconde conçue avec des box shadow&nbsp;:<a href="https://codepen.io/jaysalvat/pen/HaqBf" target="_blank">Liens vers la Joconde.</a></p>
+
+			<h4><code>text-shadow</code></h4>
+
+			<p>La propriété <dfn>text-shadow</dfn> permet d'ajouter des ombres au texte.</p>
+
+			<p>Les valeurs possibles sont&nbsp;:</p>
+
+			<ul class="liste_valeur">
+				<li><code>none</code></li>
+				<li><code>h-shadow</code></li>
+				<li><code>v-shadow</code></li>
+				<li><code>blur-radius</code></li>
+				<li><code>color</code></li>
+			</ul>
+
+			<p>La valeur par défaut est&nbsp;: <code>none</code>.</p>
+
+			<div class="exemple">
+				<div class="enveloppe_modale">
+					<p class="exemple_text-shadow_1">Exemple</p>
+					<button aria-label="Bouton voir code : text shadow exemple 1" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.exemple_text-shadow_1 { 
+<!--                 	    -->	font-size: xx-large;
+<!--                 	    -->	font-weight: bolder;
+<!--                 	    -->	text-shadow: 20px 20px var(--accent);
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+				<div class="enveloppe_modale">
+					<p class="exemple_text-shadow_2">Exemple</p>
+					<button aria-label="Bouton voir code : text shadow exeple 2" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.exemple_text-shadow_2 { 
+<!--                 	    -->	text-shadow: #f95d9b 5px 10px 10px;
+<!--                 	    -->	font-size: xx-large;
+<!--                 	    -->	font-weight: bolder;
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+				<div class="enveloppe_modale">
+					<p class="exemple_text-shadow_3">Exemple</p>
+					<button aria-label="Bouton voir code : text shadow 3" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.exemple_text-shadow_3 { 
+<!--                 	    -->	font-size: xx-large;
+<!--                 	    -->	font-weight: bolder;
+<!--                 	    -->	text-shadow: 	20px 1px 5px var(--accent),
+<!--                 	    -->			20px 0 2px var(--principale), 
+<!--                 	    -->			0 10px 1em var(--noir);
+}
+
+							</code>
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+			</div>
+		</section>
+	<!-- T -->
+		<section>
+			<h2 id="lettre_t">T</h2>
+
+			<h3>Transformation</h3>
+
+			<p>Il est possible d'apporter une transformation 2D ou 3D à des éléments.</p>
+
+			<h4><code>transform</code></h4>
+
+			<p>La propriété <dfn>transform</dfn> permet d'apporter des transformations sur un élément.</p>
+
+			<p>Il y a plusieurs valeurs possibles dont&nbsp;:</p>
+
+			<ul class="liste_valeur">
+				<li><code>matrix</code></li>
+				<li><code>translate</code></li>
+				<li><code>scale</code></li>
+				<li><code>rotate</code></li>
+				<li><code>skew</code></li>
+			</ul>
+
+			<p>La valeur par défaut est&nbsp;: <code>none</code>.</p>
+
+			<div class="exemple">
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple exemple_box-transform">
+						<div class="matrix"></div>
+					</div>
+					<button aria-label="Bouton voir code : box transform matrix" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.exemple_box-transform { 
+<!--                 	    -->	align-items: center;
+<!--                 	    -->	display: flex;
+<!--                 	    -->	justify-content: center;
+<!--                 	    -->}
+								
+<!--                 	    -->.exemple_box-transform &gt; .matrix{ 
+<!--                 	    -->	background: #f95d9b;
+<!--                 	    -->	height: 40px;
+<!--                 	    -->	transform: matrix(2, 3, 3, 1, 3, 5);
+<!--                 	    -->	width: 40px;
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple exemple_box-transform">
+						<div class="translate"></div>
+					</div>
+					<button aria-label="Bouton voir code : box transform translate" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.exemple_box-transform { 
+<!--                 	    -->	align-items: center;
+<!--                 	    -->	display: flex;
+<!--                 	    -->	justify-content: center;
+<!--                 	    -->}	
+
+<!--                 	    -->.exemple_box-transform &gt; .translate { 
+<!--                 	    -->	background: #f95d9b;
+<!--                 	    -->	height: 100px;
+<!--                 	    -->	transform: translate(50%);
+<!--                 	    -->	width: 100px;
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button  class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple exemple_box-transform">
+						<div class="scale"></div>
+					</div>
+					<button aria-label="Bouton voir code : box transform scale" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.exemple_box-transform { 
+<!--                 	    -->	align-items: center;
+<!--                 	    -->	display: flex;
+<!--                 	    -->	justify-content: center;
+<!--                 	    -->}
+
+<!--                 	    -->.exemple_box-transform &gt; .scale{ 
+<!--                 	    -->	background: #f95d9b;
+<!--                 	    -->	height: 100px;
+<!--                 	    -->	transform: scaleX(25%);
+<!--                 	    -->	width: 100px;
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="Bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple exemple_box-transform">
+						<div class="rotate"></div>
+					</div>
+					<button aria-label="Bouton voir code : box transform rotate" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.exemple_box-transform { 
+<!--                 	    -->	align-items: center;
+<!--                 	    -->	display: flex;
+<!--                 	    -->	justify-content: center;
+<!--                 	    -->}
+
+<!--                 	    -->.exemple_box-transform &gt; .rotate{ 
+<!--                 	    -->	background: #f95d9b;
+<!--                 	    -->	height: 100px;
+<!--                 	    -->	transform: rotate(45deg);
+<!--                 	    -->	width: 100px;
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple exemple_box-transform">
+						<div class="skew"></div>
+					</div>
+					<button aria-label="Bouton voir code : box transform skew" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.exemple_box-transform { 
+<!--                 	    -->	align-items: center;
+<!--                 	    -->	display: flex;
+<!--                 	    -->	justify-content: center;
+<!--                 	    -->}
+
+<!--                 	    -->.exemple_box-transform &gt; .skew{ 
+<!--                 	    -->	background: #f95d9b;
+<!--                 	    -->	height: 100px;
+<!--                 	    -->	transform: skew(50deg);
+<!--                 	    -->	width: 100px;
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+			</div>
+		</section>
+	<!-- W -->
+		<section>
+			<h2 id="lettre_w">W</h2>
+
+			<h3>'Word' et 'Writting'</h3>
+
+			<p>CSS3 permet de définir dans quel sens nous souhaitons que le texte apparaisse. De plus, nous pouvons déterminer comment gérer les césures lorsque le texte est plus long que son contenant.</p>
+
+			<h4><code>word-break</code></h4>
+
+			<p>La propriété <dfn>word-break</dfn> permet de définir comment appliquer les césures lorsque le mot est plus long que son conteneur. 
+			</p>
+
+			<p>Les valeurs possibles sont&nbsp;:</p>
+			<ul class="liste_valeur">
+				<li><code>normal</code></li>
+				<li><code>break-all</code></li>
+				<li><code>keep-all</code></li>
+			</ul>
+
+			<p>La valeur par défaut est&nbsp;: <code>none</code>.</p>
+
+			<div class="exemple">
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple word-break_normal">
+						<p>La définition du mot hippopotomonstrosesquippedaliophobie&nbsp;: Peur des mots longs.</p>
+						<p>哈利波特是一個非常酷的巫師羅恩韋斯萊害怕蜘蛛。赫敏超級聰明。</p>
+					</div>
+					<button aria-label="Bouton voir code : word-break normal" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+								
+<!--                 	    -->.word-break_normal { 
+<!--                 	    -->	word-break: normal;
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple word-break_break_all">
+						<p>La définition du mot hippopotomonstrosesquippedaliophobie&nbsp;: Peur des mots longs.</p>
+						<p>哈利波特是一個非常酷的巫師羅恩韋斯萊害怕蜘蛛。赫敏超級聰明。</p>
+					</div>
+					<button aria-label="Bouton voir code : word-break all" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.word-break_break_all { 
+<!--                 	    -->	word-break: break-all;
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple word-break_keep_all">
+						<p>La définition du mot hippopotomonstrosesquippedaliophobie&nbsp;: Peur des mots longs.</p>
+						<p>哈利波特是一個非常酷的巫師羅恩韋斯萊害怕蜘蛛。赫敏超級聰明。</p>
+					</div>
+					<button aria-label="Bouton voir code : word-break keep-all" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.word-break_keep_all { 
+<!--                 	    -->	word-break: keep-all;
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+			</div>
+				
+			<h4><code>writting-mode</code></h4>
+
+			<p>La propriété <dfn>writting-mode</dfn> permet de définir dans quel sens on souhaite afficher le texte.</p>
+
+			<p>Les valeurs possibles sont&nbsp;:</p>
+			<ul class="liste_valeur">
+				<li><code>horizontal-tb</code></li>
+				<li><code>vertical-rl</code></li>
+				<li><code>vertical-lr</code></li>
+			</ul>
+
+			<p>La valeur par défaut est&nbsp;: <code>horizontal-tb</code>.</p>
+
+			<div class="exemple">
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple writting-mode_horizontal-tb">
+						<p>"The Gallerist" est l'un de mes jeux préférés.</p>
+					</div>
+					<button aria-label="Bouton voir code : writting-mode horizontal tb" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+<!--                 	    -->.writting-mode_horizontal-tb { 
+<!--                 	    -->	writing-mode: horizontal-tb;
+<!--                 	    -->}
+							</code>
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+				
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple writting-mode_vertical-rl">
+						<p>"The Gallerist" est l'un de mes jeux préférés.</p>
+					</div>
+					<button aria-label="Bouton voir code : writting-mode vertical rl" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+<!--                 	    -->.writting-mode_vertical-rl {
+<!--                 	    -->	writing-mode: vertical-rl; 
+<!--                 	    -->}
+							</code>
+						</pre>
+						<button aria-label="bouton fermer modale" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+				
+				<div class="enveloppe_modale">
+					<div class="contenant_exemple writting-mode_vertical-lr">
+						<p>"The Gallerist" est l'un de mes jeux préférés.</p>
+					</div>
+					<button aria-label="Bouton voir code : writting-mode vertical lr" class="modale_btn"><i class="fas fa-code"></i></button>
+					<div class="modale">
+						<pre tabindex="0">
+							<code>
+
+<!--                 	    -->.writting-mode_vertical-lr {
+<!--                 	    -->	writing-mode: vertical-lr; 
+<!--                 	    -->}
+
+							</code>
+						</pre>
+						<button aria-label="Bouton voir code : writting-mode vertical lr" class="modale_close_btn"><i class="fas fa-times"></i></button>	
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<a href="#top" class="fleche_haut_btn" aria-label="Remonter au top de la page"><i class="fas fa-arrow-up"></i></a>
+	</main>
+	<footer>
+		<ul class="footer_ul">
+			<li>Travail long 1</li>
+			<li>Elisabeth Desjardins</li>
+			<li>Juillet 2021</li>
+		</ul>
+	</footer>
+</body>
+</html>

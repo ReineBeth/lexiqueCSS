@@ -1,0 +1,904 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&family=Oxygen+Mono&family=Ubuntu&display=swap');
+
+:root { 
+	--accent: #f95d9b; 
+	--blanc: #f6f5f3; 
+	--neutre:  #dce1e3; 
+	--noir: #0d0d0d; 
+	--principale: #161748; 
+	--secondaire: #39a0ca; 
+}
+
+/* Générale */
+
+html { 
+	scroll-behavior: smooth;
+}
+
+body { 
+	font-family: 'Oxygen', sans-serif;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: auto 1fr auto; 
+}
+
+main { 
+	background: var(--blanc);
+	grid-column: 1 / 6;
+	position: relative;
+}
+
+section { 
+	margin: 25px;
+	padding: 10px;
+	position: relative;
+}
+
+h1 { 
+	font-size: 2rem;
+	margin-top: 50px;
+	transition: font-size 0.5s, margin-top 0.5s;
+}
+
+h2 { 
+	background: var(--secondaire);
+	color: var(--blanc);
+	font-size: 5rem;
+	text-align: center;
+	padding: 30px;
+	scroll-margin-top: 1.5em;
+}
+
+h1, h2, h3, h4 { 
+	font-family: 'Ubuntu', sans-serif;
+}
+
+/* Entete : titre et navigation */
+
+header { 
+	background: var(--principale);
+	box-shadow: 0 10px 10px rgb(13, 13, 13, 0.8);
+	color: var(--blanc); 
+	grid-column: 1/6;
+	position: sticky;
+	top: 0;
+	transition: height 0.5s;
+	width: 100%;
+	z-index: 10;
+}
+
+.entete { 
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
+
+nav > ul { 
+	display: flex; 
+	flex-wrap: wrap;
+	justify-content: space-between;
+	font-size: 1.5rem;
+	padding: 10px;
+	transition: padding 0.5s, font-size 0.5s;
+}
+
+.navigation_ul_li { 
+	display: none;
+	list-style-type: none;
+	padding: 10px;
+}
+
+/* Les listes */
+
+ul li { 
+	list-style-type: none;
+}
+
+.liste_valeur li { 
+	list-style-type: square;
+	
+}
+
+dt { 
+	font-weight: bold;
+}
+
+/* Boutons et liens*/
+i {
+	font-size: 3rem;
+}
+
+button { 
+	background: transparent;
+	border: none;
+	height: 70px;
+	text-align: center;
+	width: 70px;
+}
+
+.menu_btn, 
+.close_btn { 
+	color: var(--blanc);
+	margin: 0;
+	position: absolute;
+	right: 5px;
+	top: 0;
+}
+
+.close_btn { 
+	display: none;
+} 
+
+.fleche_haut_btn { 
+	background: rgba(220, 225, 227, 0.5);
+	border: 1px solid var(--principale);
+	bottom: 20px;	
+	position: fixed;
+	right: 20px;
+	font-size: 3rem;
+}
+
+.modale_btn { 
+	color: var(--principale);
+	position: relative;
+	z-index: 5;
+}
+
+.modale_close_btn { 
+	color: var(--principale);
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.perseptive_btn { 
+	bottom: -65px;
+	position: absolute;
+}
+
+a { 
+	text-decoration: none;
+}
+
+a { 
+	color: var(--principale);
+	padding: 10px;
+	text-decoration: none;
+}
+
+.navigation_ul_li a { 
+	color: var(--blanc)
+}
+
+a:focus, 
+a:hover,
+button:focus,
+button:hover { 
+	color: var(--accent);
+	cursor: pointer;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+a:focus,
+button:focus { 
+	border: 3px dashed var(--accent);
+	border-radius: 5px;
+	outline: none;
+}
+	
+/* Autres éléments générales */
+
+figure { 
+	background: var(--neutre);
+	border: 10px solid var(--principale);
+	margin: 15px auto;
+	max-width: 400px;
+	width: 100%;
+}
+
+img { 
+	width: 100%;
+}
+
+figcaption { 
+	background: var(--principale);
+	color: var(--blanc);
+	margin: -5px;
+	padding: 15px;
+	text-align: center;
+}
+
+pre { 
+	font-size: 0.8rem;
+	overflow: auto;
+	padding: 20px;
+}
+
+pre:focus { 
+	border: 5px dashed var(--accent);
+	outline: none;
+}
+
+code,
+dfn { 
+	font-family: 'Oxygen Mono', monospace;
+	font-weight: bold;
+}
+
+.exemple { 
+	display: flex;
+	justify-content:space-around;
+	flex-wrap: wrap;
+	font-family: 'Oxygen Mono', monospace;
+	position: relative;
+}
+
+.enveloppe_modale { 
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.modale { 
+	background: var(--neutre);
+	border: 10px solid var(--principale);
+	box-shadow: 10px 10px 10px 100vh rgb(13, 13, 13, 0.8);
+	display: none;
+	position: fixed;	
+	left: 10%;	
+	top: 5%;
+	width: 80vw;
+	z-index: 100;
+}
+
+.contenant_exemple { 
+	background: var(--neutre);
+	border: 5px solid var(--principale);
+	color: var(--noir);
+	height: 200px;
+	margin: 10px;
+	position: relative;
+	width: 250px;
+}
+
+#top { 
+	visibility: hidden;
+}
+
+/* Les Éléments A-Z*/
+
+/* Alignement */
+
+.contenant_align_content { 
+	display: flex;
+	align-content: space-around;
+	flex-wrap: wrap;
+}
+
+.contenu_align { 
+	background: var(--accent);
+	border: 5px solid var(--secondaire);
+	height: 50px;
+	width: 100px;
+	margin: 5px;
+}
+
+.contenant_align_items {
+	display: flex;
+	align-items: space-around;
+	flex-wrap: wrap;
+}
+
+.contenant_align_self { 
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.contenant_align_self > .contenu_align:nth-child(2) { 
+	align-self: flex-end;
+	background: var(--principale);
+	border-color: var(--accent);
+}
+
+/* Bordure */
+
+.contenant_border-image {
+	margin: 5px;
+}
+
+.contenant_border-image_1 {
+	border-image: linear-gradient(var(--accent), var(--principale)) 50 / 10;
+}
+
+.contenant_border-image_2 {
+	border-image: url(/images/bordure_pois.jpg) 27 round;
+}
+
+.contenant_border-radius_1 { 
+	border-radius: 50%;
+}
+
+.contenant_border-radius_2 { 
+	border-radius: 50% 10px;
+}
+
+.contenant_border-radius_3 { 
+	border-radius: 50% 10px 15px;
+}
+
+.contenant_border-radius_4 { 
+	border-radius: 50% 10px 15px 35%;
+}
+
+/* Colonne */
+
+.enveloppe_modale > .contenant_columns { 
+	height: 250px;
+	width: 95%;
+	margin-right: 0;
+	max-width: 600px;
+}
+
+.exemple_columns { 
+	columns: 10rem 3;
+	
+}
+
+.exemple_column-count { 
+	column-count: 3;
+}
+
+.exemple_column-fill { 
+	columns: 3;
+	column-fill: auto;
+}
+
+.exemple_column-gap { 
+	columns: 2;
+	column-gap: 5rem;
+}
+
+.exemple_column-rule { 
+	columns: 2;
+	column-rule: 1rem dashed var(--accent);
+}
+
+.exemple_column-span { 
+	columns: 2;
+}
+
+.exemple_column-span > p:first-child { 
+	background: var(--secondaire);
+	color: var(--principale);
+	column-span: all;
+}
+
+.exemple_column-width { 
+	column-width: 10rem;
+}
+
+/* Dessiner des formes */
+
+.chevron::before, 
+.chevron::after {
+	content: '';
+	background: var(--accent);
+	height: 50px;
+	width: 80px;
+	position: absolute;
+	top: 35%;
+}
+
+.chevron::before { 
+	left: 50%; 
+	transform: skew(0, 50deg);
+}
+
+.chevron::after { 
+	right: 50%;
+	transform: skew(0, -50deg)
+}
+
+.triangle { 
+	border:5px solid transparent;
+	border-left-color: var(--accent);
+	border-width: 0 100px 150px 150px;
+	margin: auto; 
+	position: absolute;
+	left: 10%;
+	top: 10%; 
+}
+
+.infini::before, 
+.infini::after {
+	content: "";
+	border: 20px solid var(--accent);
+	height: 45px;
+	width: 45px;
+	position: absolute;
+	top: 30%;
+}
+
+.infini::before {
+	content: "";
+	border-radius: 50px 50px 0 50px;
+	left: 15%;
+	transform: rotate(-45deg);
+}
+
+.infini::after {
+	content: "";
+	border-radius: 0 50px 50px 50px;
+	transform: rotate(-45deg);
+	right: 15%;
+}
+
+.loupe { 
+	border: 20px solid var(--accent);
+	border-radius: 50%;
+	height: 100px;
+	width: 100px;
+	margin: 10px;
+}
+	
+.loupe::after{ 
+	content: '';
+	background: var(--accent);
+	bottom: 0;
+	height: 100px;
+	position: absolute;
+	right: 75px;
+	transform: rotate(-50deg);
+	width: 20px;
+}
+
+.coeur::before, 
+.coeur::after { 
+	content: ''; 
+	background: var(--accent);
+	border-radius: 50px 50px 0 0;
+	height: 150px;
+	width: 100px;
+	position: absolute;
+	top: 20px;
+}
+
+.coeur::before { 
+	transform: rotate(-45deg);
+	left: 57px;
+}
+
+.coeur::after { 
+	right: 57px;
+	transform: rotate(45deg);
+}
+
+.lune { 
+	border-radius: 50%;
+	box-shadow: 50px 20px 0 var(--accent);
+	height: 150px;
+	width: 150px;
+}
+
+.bulle { 
+	background: var(--accent);
+	border-radius: 30px;
+	height: 100px;
+	width: 200px;
+	position: absolute;
+	top: 25px;
+	left: 25px;
+}
+
+.bulle::after { 
+	content: '';
+	border:5px solid transparent;
+	border-right-color: var(--accent);
+	border-width: 0 50px 50px 50px;
+	margin: auto; 
+	position: absolute;
+	bottom: -45px; 
+	left: 10%;
+	right: 20px;
+}
+
+.lunette { 
+	background: var(--accent);
+	height: 20px;
+	width: 40px;
+	position: absolute;
+	left: 42%;
+	top: 42%;
+}
+
+.lunette::before, 
+.lunette::after { 
+	content: '';
+	border: 20px solid var(--accent);
+	border-radius: 50%;
+	height: 72px;
+	width: 72px;
+	position: absolute;
+	top: -40px;
+}
+
+.lunette::before { 
+	left: -100px;
+}
+
+.lunette::after{ 
+	right: -100px;
+}
+
+.etoile::before,
+.etoile::after { 
+	content: '';
+	border-left: 75px solid transparent;
+	border-right: 75px solid transparent;
+	border-top: 150px solid var(--accent);
+	position: absolute;
+	left: 50px;
+}
+
+.etoile::before { 
+	top: 2px;
+	transform: rotate(180deg);
+}
+
+.etoile::after { 
+	top: 25%;
+}
+/* Filtre */
+
+.filter_blur { 
+	filter: blur(5px);
+}
+
+.filter_brightness { 
+	filter: brightness(50%);
+}
+
+.filter_contrast { 
+	filter: contrast(50%);
+}
+
+.filter_drop-shadow { 
+	filter: drop-shadow( 0 10px 10px var(--noir));
+}
+
+.filter_grayscale { 
+	filter: grayscale(85%);
+}
+
+.filter_hue-rotate { 
+	filter: hue-rotate(300deg);
+}
+
+.filter_invert { 
+	filter: invert(100%);
+}
+
+.filter_opacity { 
+	filter: opacity(50%);
+} 
+
+.filter_saturation { 
+	filter: saturate(400%);
+} 
+
+.filter_sepia { 
+	filter: sepia(50%);
+} 
+
+.filter_multiples { 
+	filter: contrast(50%) 
+			brightness(120%) 
+			saturate(500%)
+			invert(80%);
+}
+
+/* Gradient */
+
+.exemple_gradient_1 { 
+	background: linear-gradient(var(--accent), var(--secondaire));
+}
+
+.exemple_gradient_2 { 
+	background: radial-gradient(var(--accent), var(--secondaire));
+}
+
+.exemple_gradient_3 { 
+	background: repeating-linear-gradient(var(--accent), var(--secondaire) 20px);
+}
+
+.exemple_gradient_4 {
+	background: repeating-radial-gradient(var(--accent), var(--secondaire) 20px);
+}
+
+.exemple_gradient_5 {
+	background: conic-gradient(var(--accent), var(--secondaire));
+}
+
+/* Hyphens */
+
+.hyphens_none { 
+	hyphens: none;
+}
+
+.hyphens_auto { 
+	hyphens: auto;
+}
+
+/* Mix-Blend-Mode */
+
+.contenant_exemple.mix-blend-mode { 
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: center;
+	isolation: isolate;
+}
+
+.contenant_exemple.mix-blend-mode > * {
+	border-radius: 50%;
+	height: 115px;
+	width: 115px;
+	position: absolute;
+}
+
+.contenant_exemple.mix-blend-mode > .rouge {
+	background: rgb(201, 55, 84);
+	top: 20px;
+}
+
+.contenant_exemple.mix-blend-mode > .vert {
+	background: rgb(55, 201, 104);
+	left: 20px;
+	bottom: 20px;
+}
+
+.contenant_exemple.mix-blend-mode > .bleu {
+	background: rgb(55, 123, 201);
+	right: 20px;
+	bottom: 20px;
+}
+
+.darken { 
+	mix-blend-mode: darken;
+}
+
+.hard-light { 
+	mix-blend-mode: hard-light;
+}
+
+.difference { 
+	mix-blend-mode: difference;
+}
+
+.screen {
+	mix-blend-mode: screen;
+}
+
+.exclusion { 
+	mix-blend-mode: exclusion;
+}
+
+/* Overflow */
+.img_renard { 
+	width: 300px;
+}
+
+.overflow_visible { 
+	overflow: visible;
+}
+
+.overflow_hidden { 
+	overflow: hidden;
+}
+
+.overflow_scroll { 
+	overflow: scroll;
+}
+
+
+.overflow_auto { 
+	height: 200px;
+	width: 350px;
+	overflow: auto;
+}
+
+.overflow_scroll:focus,
+.overflow_auto:focus { 
+	outline: none;
+	border: 5px dashed var(--accent);
+}
+/* Perseptive */
+
+.exemple_perseptive { 
+	perspective: 100px;
+	overflow: hidden;
+}
+
+.exemple_perseptive > .enfant { 
+	background: var(--accent);
+	width: 250px;
+	height: 250px;
+	transform: rotateX(25deg);
+}
+
+/* Resize */
+
+.redimensionner_display{ 
+	display: block;
+}
+
+.exemple_resize { 
+	background: var(--accent);
+	overflow: auto;
+}
+
+.resize_none { 
+	resize: none;
+}
+
+.resize_both { 
+	resize: both;
+}
+
+.resize_horizontal { 
+	resize: horizontal;
+}
+
+.resize_vertical { 
+	resize: vertical;
+}
+
+/* Shadow */
+
+.exemple_box-shadow_1 { 
+	box-shadow: 20px 20px var(--accent);
+	margin: 50px auto;
+}
+
+.exemple_box-shadow_2 { 
+	box-shadow: inset 20px 20px var(--accent);
+	margin: 50px auto;
+}
+
+.exemple_box-shadow_3 { 
+	box-shadow: -20px 15px 10px 20px var(--accent);
+	margin: 50px auto;
+}
+
+.exemple_text-shadow_1, 
+.exemple_text-shadow_2, 
+.exemple_text-shadow_3 { 
+	font-size: xx-large;
+	font-weight: bolder;
+}
+
+.exemple_text-shadow_1 { 
+	text-shadow: 20px 20px var(--accent);
+}
+
+.exemple_text-shadow_2 { 
+	text-shadow: var(--accent) 5px 10px 10px;
+}
+
+.exemple_text-shadow_3 { 
+	text-shadow: 	20px 1px 5px var(--accent),
+					20px 0 2px var(--principale), 
+					0 10px 1em var(--noir);
+}
+
+/* Transform */
+
+.exemple_box-transform { 
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.exemple_box-transform > .matrix{ 
+	background: var(--accent);
+	height: 40px;
+	width: 40px;
+	transform: matrix(2, 3, 3, 1, 3, 5);
+}
+
+.exemple_box-transform > .translate{ 
+	background: var(--accent);
+	height: 100px;
+	width: 100px;
+	transform: translate(50%);
+}
+
+.exemple_box-transform > .scale{ 
+	background: var(--accent);
+	height: 100px;
+	width: 100px;
+	transform: scaleX(25%);
+}
+
+.exemple_box-transform > .rotate{ 
+	background: var(--accent);
+	height: 100px;
+	width: 100px;
+	transform: rotate(45deg);
+}
+
+.exemple_box-transform > .skew{ 
+	background: var(--accent);
+	height: 100px;
+	width: 100px;
+	transform: skew(50deg);
+}
+
+/* Word and Writting */
+
+.word-break_normal { 
+	word-break: normal;
+}
+
+.word-break_break_all { 
+	word-break: break-all;
+}
+
+.word-break_keep_all { 
+	word-break: keep-all;
+}
+
+.writting-mode_horizontal-tb { 
+	writing-mode: horizontal-tb;
+}
+
+.writting-mode_vertical-rl {
+	writing-mode: vertical-rl; 
+}
+
+.writting-mode_vertical-lr {
+	writing-mode: vertical-lr; 
+}
+
+/* Footer */
+
+footer { 
+	background: var(--principale);
+	color: var(--blanc);
+	grid-column: 1 / 6;
+}
+
+.footer_ul {
+	display: flex;
+	padding: 25px;
+}
+
+.footer_ul > li {
+	flex-basis: 100%;
+	text-align: center;
+}
+
+@media screen and (min-width: 800px){
+
+	.menu_btn,
+	.close_btn { 
+		display: none;
+	}
+
+	.navigation_ul_li { 
+		display: block;
+	}
+
+	.exemple_resize { 
+		height: 50px;
+		width: 100%;
+	}
+
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
